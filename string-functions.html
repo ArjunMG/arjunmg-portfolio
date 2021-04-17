@@ -1,0 +1,35 @@
+<html>
+    <head>  
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="./script.js"></script>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+<body>
+<form>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">String Functions</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="./index.html">About Us</a></li>
+          </ul>
+        </div>
+      </nav>
+    <div class="row container">
+        <div class="col-md-4">
+            <textarea style="resize: none;" name="asciiString" id="asciiString" cols="50" rows="10" placeholder="ASCII"></textarea>
+            <button type="button" class="btn btn-success" onclick="callAPI(document.getElementById('asciiString').value)">Convert</button>
+        </div>
+        <div class="col-md-4">
+            <textarea style="resize: none;" name="hexString" id="hexString" cols="50" rows="10" placeholder="HEX"></textarea>
+        </div>
+    </div>    
+</form>
+</body>
+</html>
