@@ -18,12 +18,27 @@
 
     <div class="container  main-body">
         <div class="col-md-4">
-            <textarea style="resize: none;" name="asciiString" id="asciiString" placeholder="ASCII"></textarea>
-            <button type="button btn-default" class="btn btn-success" onclick="callAPI(document.getElementById('asciiString').value), 'ascii'">Convert</button>
+          <span>ASCII</span><br>
+          <textarea name="asciiString" id="asciiString" placeholder="ASCII"></textarea>
+          <br>
+          <button type="button btn-default" class="btn btn-success" onclick="callAPI(document.getElementById('asciiString').value, 'ascii')">Convert</button>
         </div>
         <div class="col-md-4">
-            <textarea style="resize: none;" name="hexString" id="hexString" placeholder="HEX"></textarea>
-            <button type="button btn-default" class="btn btn-success" onclick="callAPI(document.getElementById('asciiString').value), 'hex'">Convert</button>
+          <span>HEX</span><br>
+          <textarea name="hexString" id="hexString" placeholder="HEX"></textarea>
+          <br>
+          <button type="button btn-default" class="btn btn-success" onclick="callAPI(document.getElementById('hexString').value, 'hex')">Convert</button>
+        </div>
+        <div class="col-md-4">
+          <span>Decimal</span><br>
+          <textarea name="decString" id="decString" placeholder="Decimal"></textarea>
+          <br>
+          <button type="button btn-default" class="btn btn-success" onclick="callAPI(document.getElementById('decString').value, 'decimal')">Convert</button>
+        </div><div class="col-md-4">
+          <span>Base64</span><br>
+          <textarea name="base64String" id="base64String" placeholder="Base64"></textarea>
+          <br>
+          <button type="button btn-default" class="btn btn-success" onclick="callAPI(document.getElementById('base64String').value, 'base64')">Convert</button>
         </div>
       </div>
   </body>
