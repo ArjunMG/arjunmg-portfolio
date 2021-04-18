@@ -38,6 +38,19 @@ footer{
     border-bottom: solid 2px rgba(0, 0, 0, 0.096);
     color: rgb(114, 112, 112);
 }
+
+textarea {
+    width: 350px;
+    height: 200px;
+    border: 2px solid;
+    margin-bottom: 8px;
+    padding: 10px;
+}
+
+.nav-head{
+    opacity: 50%;
+}
+
 .nav-bar{
     position: fixed;
     top: 0;
