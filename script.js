@@ -25,3 +25,26 @@ var callAPI = (asciiString) => {
     })
     .catch(error => console.log('error', error));
 }
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos ) {
+    // && currentScrollPos < 100
+    document.getElementById("top-bar").style.top = "0";
+  } else {
+    document.getElementById("top-bar").style.top = "-200px";
+  }
+  prevScrollpos = currentScrollPos;
+} 
+
+
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+    var x = document.getElementById("top-bar");
+    if (x.className === "nav-bar") {
+        x.className += " responsive";
+    } else {
+        x.className = "nav-bar";
+    }
+}
