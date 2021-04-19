@@ -5,14 +5,15 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <script src="./script.js"></script>
-        <link rel="stylesheet" href="./style.css">
+        <script src="../script.js"></script>
+        <script src="./stringFunctions.js"></script>
+        <link rel="stylesheet" href="../style.css">
     </head>
 <body>
   <nav id="top-bar" class="nav-bar">
     <div class="container">
       <a class="nav-head" href="#">Home</a>
-      <a href="./index.html">Visit developer</a>
+      <a href="../index.html">Visit developer</a>
     </div>
   </nav>
 
@@ -21,24 +22,24 @@
           <span>ASCII</span><br>
           <textarea name="asciiString" id="asciiString" placeholder="ASCII"></textarea>
           <br>
-          <button type="button btn-default" class="btn btn-success" onclick="callAPI(document.getElementById('asciiString').value, 'ascii')">Convert</button>
+          <button type="button btn-default" class="btn btn-success" onclick="convert(document.getElementById('asciiString').value, 'ascii')">Convert</button>
         </div>
         <div class="col-md-4">
           <span>HEX</span><br>
           <textarea name="hexString" id="hexString" placeholder="HEX"></textarea>
           <br>
-          <button type="button btn-default" class="btn btn-success" onclick="callAPI(document.getElementById('hexString').value, 'hex')">Convert</button>
+          <button type="button btn-default" class="btn btn-success" onclick="convert(document.getElementById('hexString').value, 'hex')">Convert</button>
         </div>
         <div class="col-md-4">
           <span>Decimal</span><br>
           <textarea name="decString" id="decString" placeholder="Decimal"></textarea>
           <br>
-          <button type="button btn-default" class="btn btn-success" onclick="callAPI(document.getElementById('decString').value, 'decimal')">Convert</button>
+          <button type="button btn-default" class="btn btn-success" onclick="convert(document.getElementById('decString').value, 'decimal')">Convert</button>
         </div><div class="col-md-4">
           <span>Base64</span><br>
           <textarea name="base64String" id="base64String" placeholder="Base64"></textarea>
           <br>
-          <button type="button btn-default" class="btn btn-success" onclick="callAPI(document.getElementById('base64String').value, 'base64')">Convert</button>
+          <button type="button btn-default" class="btn btn-success" onclick="convert(document.getElementById('base64String').value, 'base64')">Convert</button>
         </div>
       </div>
   </body>
