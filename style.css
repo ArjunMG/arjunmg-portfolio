@@ -1,7 +1,6 @@
 *{
     font-family: 'Courier New', Courier, monospace;
     font-weight: bolder;
-    font-size: 20px;
     background-color: rgb(240, 240, 240);
 }
 
@@ -66,7 +65,7 @@ textarea {
     color: rgb(0, 0, 0);
     text-align: center;
     padding: 1.5em;
-    /* text-decoration-style: solid; */
+    font-size: 20px;
 }
 .nav-bar a:hover {
     background-color: rgba(161, 161, 161, 0.055);
@@ -74,6 +73,7 @@ textarea {
 
 .main-body{
     padding-top: 12vw;
+    padding-bottom: 30px;
 }
 .main-body h1{
       font-size: 8vw;
@@ -83,10 +83,12 @@ textarea {
     text-align: right;
     border-right: solid 2px black;
     padding-right: 30px;
+    font-size: 17px;
 }
 
 .left-border-align{
     padding-left: 30px;
+    font-size: 17px;
 }
 
 .main-body p{
@@ -115,6 +117,11 @@ textarea {
 .invert {
     -webkit-filter: invert(100%);
     filter: invert(100%);
+}
+
+.invert50 {
+    -webkit-filter: invert(50%);
+    filter: invert(50%);
 }
 
 .blink-anim{
