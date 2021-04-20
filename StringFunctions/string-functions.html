@@ -3,10 +3,6 @@
       <title>
         String Converter
       </title> 
-      <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-      <link rel="manifest" href="favicons/site.webmanifest">
-      
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -15,45 +11,66 @@
       <script src="../script.js"></script>
       <script src="./stringFunctions.js"></script>
       <link rel="stylesheet" href="../style.css">
+      <link rel="stylesheet" href="./string-functions.css">
     </head>
 <body>
   <nav id="top-bar" class="nav-bar invert">
     <div class="container">
-      <a class="nav-head col-sm-11" href="">
+      <a class="nav-head" href="">
         <img height="30px" width="30px" src="data:image/svg+xml;base64,PHN2ZyBpZD0iQ2FwYV8xIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHdpZHRoPSI1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGc+PHBhdGggZD0ibTMzNyAxOTEuMDU3djMzLjg4YzAgMTYuNjMtMTMuNDkgMzAuMTItMzAuMTIgMzAuMTJoLTM1Ljg4djMwLjEybC0xNSAxNi41MiAxNSAxNy4zNnYzOC42MDdoLTMwdi0xMzYuNDg3YzAtMTEuMTIgNi4wMy0yMC44MyAxNS0yNi4wNSA0LjQ0LTIuNTkgOS42LTQuMDcgMTUuMTItNC4wN3oiIGZpbGw9IiM2ZmUxMDAiLz48cGF0aCBkPSJtMjU2IDM1Ny42NjN2LTU1Ljk2NmwxNSAxNy4zNnYzOC42MDZ6IiBmaWxsPSIjMDBjMDAwIi8+PHBhdGggZD0ibTMzNyAxOTEuMDU3djMzLjg4YzAgMTYuNjMtMTMuNDkgMzAuMTItMzAuMTIgMzAuMTJoLTM1Ljg4djMwLjEybC0xNSAxNi41MnYtMTA2LjU3YzQuNDQtMi41OSA5LjYtNC4wNyAxNS4xMi00LjA3eiIgZmlsbD0iIzAwYzAwMCIvPjxwYXRoIGQ9Im0yNzEgMjg1LjE3N3YzMy44OGgtNjUuODhjLTE2LjYzIDAtMzAuMTItMTMuNDktMzAuMTItMzAuMTJ2LTMzLjg4aDY1Ljg4YzUuNTIgMCAxMC42OCAxLjQ4IDE1LjEyIDQuMDcgOC45NyA1LjIyIDE1IDE0LjkzIDE1IDI2LjA1eiIgZmlsbD0iI2M3ZmYwMCIvPjxwYXRoIGQ9Im0yNzEgMjg1LjE3N3YzMy44OGgtMTV2LTU5LjkzYzguOTcgNS4yMiAxNSAxNC45MyAxNSAyNi4wNXoiIGZpbGw9IiM2ZmUxMDAiLz48cGF0aCBkPSJtMjU2IDQ0OHY2NGMtMTQxLjM4IDAtMjU2LTExNC42Mi0yNTYtMjU2IDAtNzAuNjkgMjguNjUtMTM0LjY5IDc0Ljk4LTE4MS4wMmwtMzEuNy0zMS43IDExNi41My03Ljg2LTcuODYgMTE2LjUzLTMxLjcxLTMxLjcxaC0uMDFjLTM0Ljc0IDM0Ljc0LTU2LjIzIDgyLjc0LTU2LjIzIDEzNS43NiAwIDEwNi4wNCA4NS45NiAxOTIgMTkyIDE5MnoiIGZpbGw9IiM2ZmUxMDAiLz48cGF0aCBkPSJtNDM3LjAyIDQzNy4wMiAzMS43MiAzMS43Mi0xMTYuNTQgNy44NSA3Ljg2LTExNi41MyAzMS43IDMxLjdjMzQuNzUtMzQuNzQgNTYuMjQtODIuNzQgNTYuMjQtMTM1Ljc2IDAtMTA2LjA0LTg1Ljk2LTE5Mi0xOTItMTkydi02NGMxNDEuMzggMCAyNTYgMTE0LjYyIDI1NiAyNTYgMCA3MC42OS0yOC42NSAxMzQuNjktNzQuOTggMTgxLjAyeiIgZmlsbD0iIzAwYzAwMCIvPjwvZz48L3N2Zz4=" />
         String Converter
-      </a>
-      <a class="col-sm-1" href="../index.html">
-        <img height="25px" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjMyOXB0IiB2aWV3Qm94PSIwIDAgMzI5LjI2OTMzIDMyOSIgd2lkdGg9IjMyOXB0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im0xOTQuODAwNzgxIDE2NC43Njk1MzEgMTI4LjIxMDkzOC0xMjguMjE0ODQzYzguMzQzNzUtOC4zMzk4NDQgOC4zNDM3NS0yMS44MjQyMTkgMC0zMC4xNjQwNjMtOC4zMzk4NDQtOC4zMzk4NDQtMjEuODI0MjE5LTguMzM5ODQ0LTMwLjE2NDA2MyAwbC0xMjguMjE0ODQ0IDEyOC4yMTQ4NDQtMTI4LjIxMDkzNy0xMjguMjE0ODQ0Yy04LjM0Mzc1LTguMzM5ODQ0LTIxLjgyNDIxOS04LjMzOTg0NC0zMC4xNjQwNjMgMC04LjM0Mzc1IDguMzM5ODQ0LTguMzQzNzUgMjEuODI0MjE5IDAgMzAuMTY0MDYzbDEyOC4yMTA5MzggMTI4LjIxNDg0My0xMjguMjEwOTM4IDEyOC4yMTQ4NDRjLTguMzQzNzUgOC4zMzk4NDQtOC4zNDM3NSAyMS44MjQyMTkgMCAzMC4xNjQwNjMgNC4xNTYyNSA0LjE2MDE1NiA5LjYyMTA5NCA2LjI1IDE1LjA4MjAzMiA2LjI1IDUuNDYwOTM3IDAgMTAuOTIxODc1LTIuMDg5ODQ0IDE1LjA4MjAzMS02LjI1bDEyOC4yMTA5MzctMTI4LjIxNDg0NCAxMjguMjE0ODQ0IDEyOC4yMTQ4NDRjNC4xNjAxNTYgNC4xNjAxNTYgOS42MjEwOTQgNi4yNSAxNS4wODIwMzIgNi4yNSA1LjQ2MDkzNyAwIDEwLjkyMTg3NC0yLjA4OTg0NCAxNS4wODIwMzEtNi4yNSA4LjM0Mzc1LTguMzM5ODQ0IDguMzQzNzUtMjEuODI0MjE5IDAtMzAuMTY0MDYzem0wIDAiLz48L3N2Zz4=" />
       </a>
     </div>
   </nav>
 
-    <div class="container  main-body">
-        <div class="col-md-4">
+    <div class="container main-body">
+      <div class="row">
+        <div class="col-md-4 in-box">
           <span style="font-size: 20px;">ASCII</span><br>
           <textarea name="asciiString" id="asciiString" placeholder="ASCII"></textarea>
           <br>
-          <button type="button btn-default" class="btn btn-success" onclick="convert(document.getElementById('asciiString').value, 'ascii')">Convert</button>
+          <button class="btn btn-success" onclick="convert(document.getElementById('asciiString').value, 'ascii')">Convert</button>
+          <button class="btn btn-info" onclick="copyText(document.getElementById('asciiString'))">Copy</button>
         </div>
-        <div class="col-md-4">
+
+        <div class="col-md-4 in-box">
           <span style="font-size: 20px;">HEX</span><br>
           <textarea name="hexString" id="hexString" placeholder="HEX"></textarea>
           <br>
-          <button type="button btn-default" class="btn btn-success" onclick="convert(document.getElementById('hexString').value, 'hex')">Convert</button>
+          <button class="btn btn-success" onclick="convert(document.getElementById('hexString').value, 'hex')">Convert</button>
+          <button class="btn btn-info" onclick="copyText(document.getElementById('hexString'))">Copy</button>
+          <button class="btn btn-default" onclick="removeWhiteSpace(document.getElementById('hexString'))">Remove Whitespace</button>
         </div>
-        <div class="col-md-4">
+
+        <div class="col-md-4 in-box">
           <span style="font-size: 20px;">Decimal</span><br>
           <textarea name="decString" id="decString" placeholder="Decimal"></textarea>
           <br>
-          <button type="button btn-default" class="btn btn-success" onclick="convert(document.getElementById('decString').value, 'decimal')">Convert</button>
-        </div><div class="col-md-4">
+          <button class="btn btn-success" onclick="convert(document.getElementById('decString').value, 'decimal')">Convert</button>
+          <button class="btn btn-info" onclick="copyText(document.getElementById('decString'))">Copy</button>
+        </div>        
+      </div>
+      
+      <div class="row">
+        <div class="col-md-4 in-box">
           <span style="font-size: 20px;">Base64</span><br>
           <textarea name="base64String" id="base64String" placeholder="Base64"></textarea>
           <br>
-          <button type="button btn-default" class="btn btn-success" onclick="convert(document.getElementById('base64String').value, 'base64')">Convert</button>
+          <button class="btn btn-success" onclick="convert(document.getElementById('base64String').value, 'base64')">Convert</button>
+          <button class="btn btn-info" onclick="copyText(document.getElementById('base64String'))">Copy</button>
+        </div>
+
+        <div class="col-md-4 in-box">
+          <span style="font-size: 20px;">Binary</span><br>
+          <textarea name="binaryString" id="binaryString" placeholder="Binary"></textarea>
+          <br>
+          <button class="btn btn-success" onclick="convert(document.getElementById('binaryString').value, 'binary')">Convert</button>
+          <button class="btn btn-info" onclick="copyText(document.getElementById('binaryString'))">Copy</button>
+          <button class="btn btn-default" onclick="removeWhiteSpace(document.getElementById('binaryString'))">Remove Whitespace</button>
         </div>
       </div>
+        
+    </div>
   </body>
   <footer class="invert">
     Designed and developed by Arjun M G <br>
