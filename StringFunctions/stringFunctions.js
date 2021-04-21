@@ -153,7 +153,7 @@ var hexToBinary = (hexString) => {
         binString += padLeft(parseInt(hexStringSplitted[i], 16).toString(2), '0', 8) + ' ';
     }
 
-    return binString;
+    return binString.trim();
 }
 
 var padLeft = (text, character, minLength) => {
@@ -174,26 +174,29 @@ var padLeft = (text, character, minLength) => {
 var binaryToHex = (binaryString) => {
     var binString = padLeft(removeChar(binaryString.toString(), ' '), '0', 8);
     var hexArray = [];
+    var hexString = '';
 
     for (i = 0; i < binString.length / 8; i++) {
         hexArray[i] = parseInt(binString.substr(8 * i, 8), 2).toString(16);
     }
 
-    return hexArray.join(' ');
+    hexArray.forEach(element => {
+        hexString += padLeft(element.toString(), '0', 2) + ' ';
+    });
+
+    return hexString.trim();
 }
 
 //-----------------------ASCII & HEX --------------------------
 
 function asciiToHex(inputString) {
-    // Convert to hex, store to an array and finally join them to return the final hex string
-    var arr1 = [];
+    var hexString = '';
 
     for (var n = 0, l = inputString.length; n < l; n++) {
-        var hex = Number(inputString.charCodeAt(n)).toString(16);
-        arr1.push(hex);
+        hexString += padLeft(inputString.charCodeAt(n).toString(16), '0', 2) + ' ';
     }
 
-    return arr1.join(' ');
+    return hexString.trim();
 }
 
 function hexToAscii(hexString) {
@@ -230,7 +233,7 @@ function hexToDecimal(inputString) {
         }
     }
 
-    return decimalString;
+    return decimalString.trim();
 }
 
 function decimalToHex(inputString) {
@@ -242,11 +245,11 @@ function decimalToHex(inputString) {
 
         var dec = parseInt(splitStr[i]);
         if (!isNaN(dec)) {
-            hexString += dec.toString(16) + " ";
+            hexString += padLeft(dec.toString(16), '0', 2) + ' ';
         }
     }
 
-    return hexString;
+    return hexString.trim();
 }
 
 
