@@ -146,11 +146,11 @@ function convertString(inputString, inputType) {
 
 //-----------------------HEX & Binary-------------------------
 var hexToBinary = (hexString) => {
-    hexStringSplitted = hexString.split(' ');
+    hexStringValue = removeChar(hexString, ' ').trim();
     var binString = '';
 
-    for (var i = 0; i < hexStringSplitted.length; i++) {
-        binString += padLeft(parseInt(hexStringSplitted[i], 16).toString(2), '0', 8) + ' ';
+    for (var i = 0; i < hexStringValue.length; i += 2) {
+        binString += padLeft(parseInt(hexStringValue.substr(i, 2), 16).toString(2), '0', 8) + ' ';
     }
 
     return binString.trim();
@@ -255,13 +255,8 @@ function decimalToHex(inputString) {
 
 //-------------------------ASCII & BASE64-----------------------
 
-// program to encode a string to Base64
-// create Base64 Object
 const Base64 = {
-    // private property
     _keyStr: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
-
-    // public method for encoding
     asciiToBase64: function (input) {
         let output = "";
         let chr1, chr2, chr3, enc1, enc2, enc3, enc4;
