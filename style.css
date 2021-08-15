@@ -74,9 +74,22 @@ textarea {
 .main-body{
     padding-top: 6vw;
     padding-bottom: 30px;
+
+    overflow: hidden;   
+    animation: typing .2s steps(40, end);
+    /* blink-caret .75s step-end infinite; */
+    /* border-right: .15em solid; */
+    /* margin: 0 auto; */
+    /* white-space: nowrap; */
 }
 .main-body h1{
-      font-size: 8vw;
+    font-size: 8vw;
+    overflow: hidden;   
+    animation: typing 2s steps(50, end);
+    /* blink-caret .75s step-end infinite; */
+    /* border-right: .15em solid; */
+    /* margin: 0 auto; */
+    white-space: nowrap;
 }
 
 .right-border-align{
@@ -180,6 +193,11 @@ textarea {
     100% { opacity: 0; }
 }
 
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
 @media screen and (max-width: 767px) {
     .nav-bar a{
         padding-top: 5px;
@@ -190,10 +208,12 @@ textarea {
     }
     .main-body{
         margin-top: 6em;
+        padding-top: 25vw;
     }
     .main-body h1{
         font-size: 45px;
     }
+
     .main-body p{
         font-size: 20px;
     }
@@ -202,9 +222,6 @@ textarea {
         height: auto;
         margin-left: auto;
         margin-right: auto;
-    }
-    .main-body{
-        padding-top: 25vw;
     }
 
     .right-border-align, .left-border-align{
