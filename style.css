@@ -56,10 +56,8 @@ textarea {
     top: 0;
     width: 100%;
     transition: 0.4s;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     z-index: 999;
-    overflow: hidden;   
-    animation: typing 1s steps(400, end);
 }
 .nav-bar a{
     float: left;
@@ -84,7 +82,7 @@ textarea {
     /* margin: 0 auto; */
     /* white-space: nowrap; */
 }
-.main-body h1{
+.main-body > h1{
     font-size: 8vw;
     overflow: hidden;   
     animation: typing 2s steps(50, end);
@@ -178,7 +176,7 @@ textarea {
 }
 
 .works-card h1{
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 900;
     background-color: transparent;
 }
@@ -209,10 +207,9 @@ textarea {
         background-color: rgba(128, 128, 128, 0.055);
     }
     .main-body{
-        margin-top: 6em;
-        padding-top: 25vw;
+        margin-top: 10em;
     }
-    .main-body h1{
+    .main-body > h1{
         font-size: 45px;
     }
 
