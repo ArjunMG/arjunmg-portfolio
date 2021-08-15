@@ -189,7 +189,7 @@ textarea {
         background-color: rgba(128, 128, 128, 0.055);
     }
     .main-body{
-        padding-top: 6em;
+        margin-top: 6em;
     }
     .main-body h1{
         font-size: 45px;
