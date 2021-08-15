@@ -58,6 +58,8 @@ textarea {
     transition: 0.4s;
     background-color: white;
     z-index: 999;
+    overflow: hidden;   
+    animation: typing 1s steps(400, end);
 }
 .nav-bar a{
     float: left;
@@ -75,8 +77,8 @@ textarea {
     padding-top: 6vw;
     padding-bottom: 30px;
 
-    overflow: hidden;   
-    animation: typing .2s steps(40, end);
+    /* overflow: hidden;   
+    animation: typing .2s steps(40, end); */
     /* blink-caret .75s step-end infinite; */
     /* border-right: .15em solid; */
     /* margin: 0 auto; */
